@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/login-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+        <script src="http://libs.baidu.com/jquery/1.11.3/jquery.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src="js/jquery.validate.messages_zh.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/login2.js"></script>
+		
+		
+	</head>
+	<body>
+		<!--
+        	作者：741818776@qq.com
+        	时间：2016-09-12
+        	描述：登录页面:头部
+       -->
+		<div id="login_head" class="clear">
+			<a href="index.html" class="logo"></a>
+		</div>
+		<!--
+        	作者：741818776@qq.com
+        	时间：2016-09-12
+        	描述：登录bg
+        -->
+        <div id="da_login_bg">
+        	<div class="da_login_index">
+        		<div class="login_right">
+        			<div class="login_panel">
+        				<h2>达令管理员</h2>
+        				<a class="close" href="javascript:;"></a>
+        				<div class="tabs clear">
+        					<a href="javascript:;" class="active">登录</a>
+        					<a href="javascript:;" class>注册</a> 
+        				</div><!--登录注册 tab页-->
+        				<form class="login_form" method="POST" novalidate="novalidate" style="display: block;">
+        					<div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_user"><!--头像-->
+					           		</span>
+					            </span>
+					            <input type="text" name="tel" id="tel" class="tel d_tel_i" maxlength="11"  placeholder="请输入您的手机号码">
+					            <label id="tel_error" class="error" for="tel" style="display:none"></label>
+					        </div><!--手机号-->
+					        <div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_password"><!--密码头像-->
+					           		</span>
+					            </span>
+					            <input type="password" name="pass" id="pass" class="password" maxlength="18"  placeholder="请输入密码">
+					            <label id="pass_error" class="error" for="pass" style="display:none" >请输入密码</label>				            
+					        </div><!--密码-->
+					    	<p class="forgot">
+					            <a href="/index.php?_c=login&amp;_a=pwd">忘记密码？</a>
+					        </p>
+					        <p style="color: #a00;"></p><!--用户不存在-->
+					        <button type="button" class="submit_btn" id="denglu">登录</button>
+        				</form><!--登录表单-->
+        				<!--*********************注册********************************-->
+        				<form class="register_form" method="POST" novalidate="novalidate" style="display: none;">
+        					
+        				
+        					<div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_user"><!--头像-->
+					           		</span>
+					            </span>
+					            <input type="text" name="tel" class="tel valid z_tel_i" required="true" tel="true"  placeholder="请输入您的手机号码">
+					            <label id="tel_zhuce" class="error" for="tel_zhuce" style="display:none"></label>	
+					        </div><!--手机号-->   
+					        
+					        
+        					<div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_password"><!--锁-->
+					           		</span>
+					            </span>
+					            <input type="text" name="validate" class="verify valid yz"   placeholder="请输入验证码">
+					            <div class="yzm"></div>
+					            <label id="yz_zhuce" class="error" for="" style="display:none" >请输入验证码</label>		
+					        </div><!--验证码-->	
+					        
+        					<div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_msgcode"><!--手机验证码-->
+					           		</span>
+					            </span>
+					            <input type="text" name="code" class="sms valid"   placeholder="请输入短信验证码">
+					            <label id="sms_zhuce" class="error" for="" style="display:none" >请输入短信验证码</label>		
+					        	<button type="button" class="iphone-yzm">获取验证码</button>
+        					</div><!--验证码-->	
+					        
+					        <div class="ctrl">
+					            <span class="login_sign">
+					            	<span class="ico_password"><!--密码头像-->
+					           		</span>
+					            </span>
+					            <input type="password" name="pass" id="pass2" maxlength="15" class="password valid" required="true" placeholder="请输入密码">
+					            <label id="pass_zhuce" class="error" for="" style="display:none" >请输入密码</label>		
+					        	<p style="color: #a00;"></p>
+					        </div><!--密码-->
+					        
+					        <div class="Agreement">
+					        	<input type="checkbox" class="checkbox" />
+								我已阅读并同意<a href="javascript:;" class="xieyi-a">《达令用户注册协议》</a>	
+								<!--达令用户协议 公告-->
+								<div class="xieyi">
+									<!--协议头部-->
+									<div class="xieyi-title">
+										<em href="javascript:;"></em>
+										<p>达令用户协议</p>
+									</div>
+									<div class="article">
+										<p>《达令注册协议》（以下简称“本协议”）是达令应用所有者北京普缇客科技有限公司（以下简称“本公司”）与达令的使用者（以下简称“用户”）达成的关于使用达令服务的各项规则、条款和条件。</p>
+										<p>请您仔细阅读本注册协议，您点击"已阅读并同意"按钮后，本协议即构成对双方有约束力的法律文件。如果您不同意本协议中的任何内容，您则无权使用本应用及其相关服务。
+											<strong>您的使用行为将视为对本协议的接受，并同意接受本协议各项条款的约束。</strong>
+										</p>
+										<p class="p1">一、本应用服务条款的确认和接纳</p>
+										<p>1.本应用的各项电子服务的所有权和运作权归本公司所有。用户同意所有注册协议条款并完成注册程序，才能成为本应用的正式用户。
+											用户确认：本协议条款是处理双方权利义务的契约，始终有效，法律另有强制性规定或公司修改本协议相关内容，依其规定。</p>
+										<p>2. 用户点击同意本协议的，即视为用户确认自己具有享受本应用服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</p>
+										<p>3. 如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用本应用。</p>
+										<p class="p1">二、用户注册</p>
+										<p>1.
+    用户注册是指用户登录达令应用，按要求填写相关信息并确认同意本协议的过程。用户因进行交易、获取有偿服务等而发生的所有应纳税赋由用户自行承担。用户在注册成为达令用户时提供的信息应真实、完整、有效，并保证本公司可以通过该等信息与用户本人进行联系。同时，用户也有义务在相关资料发生变更时及时更新注册资信息。
+										<strong>如您提供的信息违背上述承诺，则我司有权拒绝向您履行任何义务，并视具体情况追究您的法律责任，包括对我司造成的损失的赔偿等等。</strong>
+										</p>
+										<p>2.在成功注册后，本公司会为每位用户开通一个账户，作为其使用达令应用服务的唯一身份标识，用户应妥善保管该账户的用户名和密码，
+											并对在其账户和密码下发生的所有活动承担责任。用户不得以任何形式转让或授权他人使用自己的达令账户，也不应用他人账户在达令进行注册和购买商品。</p>
+										<p>3. 用户同意本公司拥有通过邮件、短信、电话等形式，向其发送订单信息、促销活动等告知信息的权利。</p>
+										<p class="p1">三、合同订立</p>
+										<p>1. 达令应用上展示的商品信息（如商品名称、价格、商品描述等）仅构成要约邀请，用户通过达令订购商品，订单即为购买商品的要约，
+											只有当本公司向用户发出送货确认的信息通知用户本公司已将该商品发出，构成本公司对该订单的承诺，此时合同即告成立。</p>
+										<p>2. 用户应当保证在达令购买商品过程中遵守诚实信用原则，不扰乱网上交易的正常秩序。</p>
+									</div><!--内容-->
+									<input  class="button-sure" type="button" value="同意并继续"/>
+								</div><!--协议公告-->
+					        </div><!--协议-->
+					        <button type="button" class="submit_btn dispabled" id="zhuce">注册</button>
+        				</form>
+        			</div><!--表单外框-->
+        		</div><!--class="login_right"-->
+        	</div><!--class="da_login_index"-->
+        	
+        </div><!--id="da_login_bg"-->
+        <div id="foot">
+        	<div class="foot_assure">
+	        	<ul class="clear">
+	        		<li>为什么选择达令
+	        			<span class="icon"></span>
+	        		</li>
+	        		<li>
+	        			<span class="assure_1"></span>100多个品牌授权
+	        		</li>
+	        		<li>
+	        			<span class="assure_2"></span>24小时内发货
+	        		</li>
+	        		<li>
+	        			<span class="assure_3"></span>保税区正品
+	        			
+	        		</li>
+        		</ul>
+        	</div>
+        	<!--
+            	作者：741818776@qq.com
+            	时间：2016-09-14
+            	描述：底部第二行
+            -->
+            <div class="foot_investor clear">
+            	<dl class="first">
+            		<dt>投资人说达令</dt>
+            		<dd>“hi，达令，我是鹿晗，达令投资人，投资比影响力更重要的是责任。”</dd>
+            	</dl>
+            	<dl class="second">
+		            <dt>投资人说达令</dt>
+		            <dd>“达令™一手全球好货--带您购全球,教您神马值得买。<br>
+		                连续两年荣获App store 编辑推荐最佳购物类应用！”</dd>
+		        </dl>
+            	
+            </div>
+            
+            <!--
+            	作者：741818776@qq.com
+            	时间：2016-09-14
+            	描述：copyright
+             -->
+            <div class="foot_copyright">
+		        <p class="f14">
+		            <a href="index.html" target="_blank">首页</a> │ <a href="#" target="_blank">网站地图</a> │ <a href="#" target="_blank">消费者告知书</a> │ <a href="#" target="_blank">优惠券使用规则</a> │ <a href="#" target="_blank">退换货使用说明</a> │ <a href="#" target="_blank">关于我们</a> │ <a href="#" target="_blank">联系我们</a>
+		        </p>
+
+		        <table cellpadding="0" cellspacing="0" class="f14">
+		            <tbody><tr>
+		                <td align="right" width="170">北京普缇客科技有限公司&nbsp;</td>
+		                <td align="left">&nbsp;
+		                	<a href="#" target="_blank"><img src="http://icon.szfw.org/cert.png" border="0"></a>
+		                	<a href="#" target="_blank"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" border="0"></a>
+		                    <span></span>
+		            	</td></tr>
+		        	</tbody>
+		        </table>
+		        <p class="f14">Copyright © 2016达令 ，All Rights Reserved │ 京ICP备14009583号-1 │ 京公网安备11010502027399 | 食品流通许可证编号：SP1101051510323113 </p>
+    		</div>
+          
+        </div>
+	</body>
+</html>

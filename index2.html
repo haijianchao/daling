@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/mob.css" />
+    <link rel="stylesheet" type="text/css" href="css/pagination.css" />
+    <link rel="stylesheet" type="text/css" href="css/date.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/cart.css" />
+    <link rel="stylesheet" type="text/css" href="css/select3.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+</head>
+<style>
+    #left{
+        width: 220px;
+        height: 500px;
+        float: left;
+    }
+    #left li{
+        text-align: center;
+        height: 45px;
+        width: 99%;
+        line-height: 45px;
+        background: #e0e0e0;
+        border: #dadada solid 1px;
+    }
+    #right{
+        text-align: center;
+        margin-left: 220px;
+        min-height: 500px;
+        margin-bottom: 3rem;
+    }
+    #right h2{
+        text-align: center;
+    }
+    .select3-single-select{
+        background: #eee;
+    }
+    .select3-multiple-input{
+        width: 100%!important;
+    }
+    #right li{
+        text-align: center;
+        padding: 10px 0;
+    }
+    #new ul li{
+        display: inline-block;
+        width: 40%;
+    }
+    #right li span,#right li div{
+        vertical-align: middle;
+        text-align: left;
+    }
+    input[type=file]{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 65px;
+        height: 30px;
+    }
+    #btn-file{
+        width: 65px;
+        height: 30px;
+        background: #eee;
+        height: 30px;
+        display: inline-block;
+        text-align: center!important;
+        line-height: 30px;
+    }
+    .submit{
+        background: #e14958;
+        color: #fff;
+        border: 0;
+        outline-style: none;
+        border-radius:  5px;
+        width: 150px;
+        height: 35px;
+    }
+    #dingdan,#history{
+        margin: 0 auto;
+        width: 802px;
+    }
+    #dingdan .ul1,#history .ul1,#userInfo .ul1{
+        overflow: hidden;
+    }
+    #dingdan .ul1 li,#history .ul1 li,#userInfo .ul1 li{
+        float: left;
+        margin: 0 3px;
+    }
+    #dingdan .ul2,#history .ul2{
+        width: 800px;
+        text-align: center;
+        border: #ccc solid 1px;
+        border-top: none;
+        overflow: hidden;
+    }
+    #dingdan .ul2 li,#history .ul2 li{
+        line-height: 35px;
+        height: 35px;
+        float: left;
+        text-align: center;
+        width: 100px;
+    }
+    #dingdan .ul1 .select3-input,#history .ul1 .select3-input,#userInfo .ul1 .select3-input{
+        width: 120px;
+    }
+    .bb-icon-calendar:before {
+        content: "\f073";
+        position: absolute;
+        right: 15px;
+        top: 34%;
+        color: gray;
+    }
+    .endDate,.beginDate{
+        position: relative;
+    }
+    #end,#begin,#HistoryBegin,#HistoryEnd,#userBegin,#userEnd {
+        display: inline-block;
+        min-height: 2rem;
+        padding: 5px;
+        background: #eee;
+        border-radius: 2px;
+        text-indent: 16px;
+        margin-right:0px;
+        border: 1px solid #eee
+    }
+    .md_panel.show {
+        z-index: 9999;
+    }
+    .md_mask.show{
+        max-width: 100%!important;
+    }
+    #require,#HistoryRequire,#userInfoRequire{
+        background: #FF5000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        line-height: 26px;
+        width: 50px;
+        cursor: pointer;
+        text-align: center!important;
+    }
+    #userInfo{
+        margin: 0 auto;
+        width: 840px;
+    }
+    #userInfo #userInfoList ul{
+        display: flex;
+        width: 840px;
+        border: 1px solid #eee;
+        border-top: none;
+    }
+    #userInfo #userInfoList ul li{
+        flex: 1;
+    }
+</style>
+<body>
+<!--头部导航------------------------------------------------------->
+<div id="div-head">
+</div>
+<div>
+    <div id="left">
+    <ul>
+        <li class="dingdan">查看订单</li>
+        <li class="new">商品更新</li>
+        <li class="history">历史信息</li>
+        <li class="userInfo">用户信息</li>
+        <li>敬请期待</li>
+        <li>敬请期待</li>
+        <li>敬请期待</li>
+        <li>敬请期待</li>
+        <li>敬请期待</li>
+    </ul>
+    </div>
+    <div id="right">
+        <div id="new" style="display: none">
+            <h2>商品更新</h2>
+            <ul>
+                <li>
+                    <span>商品名称：</span><div id="example-name" class="select3-input example-input">
+                    </div>
+                </li>
+                <li>
+                    <span>商品简介：</span><div id="example-title" class="select3-input example-input">
+                    </div>
+                </li>
+                <li>
+                    <span>一级分类：</span><div id="example-1" class="select3-input example-input">
+                    </div>
+                </li>
+                <li>
+                    <span>商品原价：</span><div id="example-oldprice" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>二级分类：</span><div id="example-2" class="select3-input example-input">
+                    </div>
+                </li>
+                <li>
+                    <span>商品折扣：</span><div id="example-discount" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>特殊分类：</span><div id="example-4" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>商品现价：</span><div id="example-newprice" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>操作人员：</span><div id="example-3" class="select3-input example-input">
+                    </div>
+                </li>
+                <li>
+                    <span>图片路径：</span><div style="display: inline-block;position: relative; vertical-align: middle; width: 250px; height: 30px;"><input type="file" style="height: 30px; line-height: 30px;opacity:0;">
+                    <div id="btn-file">选择图片</div>
+                    <span id="file"></span>
+                </div>
+                </li>
+                <li><input type="button" value="保存" class="submit"></li>
+            </ul>
+        </div>
+        
+        <!--------------------------------------------------------------------------------------->
+        <div id="dingdan" style="display: block">
+            <h2>订单查询</h2>
+            <ul class="ul1">
+                <li>
+                    <span>订单号：</span><div id="example-num" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>支付方式：</span><div id="example-style" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>起始时间：</span>
+                    <span class="bb-icon-calendar beginDate"><input type="text" id="begin" placeholder="开始时间" readonly></span>
+                    <label class="until">至</label>
+                    <span class="bb-icon-calendar endDate"><input type="text" id="end" placeholder="结束时间" readonly></span>
+                </li>
+                <li><div id="require">查询</div></li>
+            </ul>
+            <div id="dingdanList" style="display: none">
+                <ul class="ul2" style="border-top:#ccc solid 1px">
+                    <li style="width: 150px;">订单号</li>
+                    <li>客户名</li>
+                    <li style="width: 200px;">购物单</li>
+                    <li>支付金额</li>
+                    <li>支付方式</li>
+                    <li style="width: 150px;">联系电话</li>
+                </ul>
+                <ul  class="ul2">
+                    <li style="width: 150px;">ec434324343</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>银联</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324344</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536895</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324346</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536897</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324347</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>微信</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324348</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324349</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>银联</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324350</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>微信</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------------------------------历史信息------------------------------------->
+        <div id="history" style="display: none">
+            <h2>历史信息</h2>
+            <ul class="ul1">
+                <li>
+                    <span>流水号：</span><div id="example-HistoryNum" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>支付方式：</span><div id="example-HistoryStyle" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>起始时间：</span>
+                    <span class="bb-icon-calendar beginDate"><input type="text" id="HistoryBegin" placeholder="开始时间" readonly></span>
+                    <label class="until">至</label>
+                    <span class="bb-icon-calendar endDate"><input type="text" id="HistoryEnd" placeholder="结束时间" readonly></span>
+                </li>
+                <li><div id="HistoryRequire">查询</div></li>
+            </ul>
+            <div id="historyList" style="display: none">
+                <ul class="ul2" style="border-top:#ccc solid 1px">
+                    <li style="width: 150px;">流水号</li>
+                    <li>用户名</li>
+                    <li style="width: 200px;">购物单</li>
+                    <li>支付金额</li>
+                    <li>支付方式</li>
+                    <li style="width: 150px;">联系电话</li>
+                </ul>
+                <ul  class="ul2">
+                    <li style="width: 150px;">ec434324343</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>银联</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324344</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536895</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324346</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536897</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324347</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>微信</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324348</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>支付宝</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324349</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>银联</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+                <ul class="ul2">
+                    <li style="width: 150px;">ec434324350</li>
+                    <li>gfdfgfd</li>
+                    <li style="width: 200px;">悦诗风吟蜂蜜面膜10片(10片)、绿野仙踪淡香水30ml(绿色棕色)、露华浓魅彩胭脂001#</li>
+                    <li>187.00</li>
+                    <li>微信</li>
+                    <li style="width: 150px;">18736536898</li>
+                </ul>
+            </div>
+        </div>
+        <div id="userInfo" style="display: none">
+            <h2>用户信息</h2>
+            <ul class="ul1">
+                <li>
+                    <span>手机号：</span><div id="example-tel" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>权限：</span><div id="example-juri" class="select3-input example-input">
+                </div>
+                </li>
+                <li>
+                    <span>注册时间段：</span>
+                    <span class="bb-icon-calendar beginDate"><input type="text" id="userBegin" placeholder="开始时间" readonly></span>
+                    <label class="until">至</label>
+                    <span class="bb-icon-calendar endDate"><input type="text" id="userEnd" placeholder="结束时间" readonly></span>
+                </li>
+                <li><div id="userInfoRequire">查询</div></li>
+            </ul>
+            <div id="userInfoList" style="display: none;">
+                <ul style="border-top: 1px solid #eee">
+                    <li>用户名/手机号</li>
+                    <li>密码</li>
+                    <li>权限</li>
+                    <li>等级</li>
+                    <li>积分</li>
+                    <li>注册时间</li>
+                    <li>上次登录时间</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+                <ul>
+                    <li>18736361392</li>
+                    <li>*********</li>
+                    <li>会员</li>
+                    <li>-</li>
+                    <li>1236.78</li>
+                    <li>2016-12-25</li>
+                    <li>2017-3-23</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部---------------------------------------------------------------->
+<div id="div-foot">
+</div>
+
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll5.js "></script>
+<script src="js/date.js "></script>
+<script src="js/select3-full.js "></script>
+<script src="js/mob.js "></script>
+
+<script>
+    $(function(){
+        //加载底部
+        $('#div-foot').load("login.html #foot")
+        //加载头部
+        $('#div-head').load("index.html #head",function(){
+            //判断是否有登陆缓存 cookie  即 是否登录
+            if($.cookie('name'))
+            {
+                $('.weidenglu').css('display','none');
+                $('.yidenglu').css('display','block');
+                var html='欢迎您,'+$.cookie("name").substring(0,4)+'****'+$.cookie("name").substring(8,11);		//欢迎回来
+                $('.name').html(html);
+                $('.exit').click(function(){//退出登录
+                    $.cookie('name',null); //删除cookie
+                    location.reload();//页面刷新
+                })
+            }
+            else{//未登录
+                $('.weidenglu').css('display','block');
+                $('.yidenglu').css('display','none');
+            }
+        })
+        //页面切换
+        $('.dingdan').on('click',function(){
+            $("#dingdan").css('display','block');
+            $("#dingdan").siblings().css('display','none');
+        })
+        $('.history').on('click',function(){
+            $("#history").css('display','block');
+            $("#history").siblings().css('display','none');
+        })
+        $('.new').on('click',function(){
+            $("#new").css('display','block');
+            $("#new").siblings().css('display','none');
+        })
+        $('.userInfo').on('click',function(){
+            $("#userInfo").css('display','block');
+            $("#userInfo").siblings().css('display','none');
+        })
+        $('#example-oldprice').select3({
+            inputType: 'Email',
+            placeholder: '请输入商品原价'
+        });
+        $('#example-discount').select3({
+            inputType: 'Email',
+            placeholder: '请输入商品折扣'
+        });
+        $('#example-newprice').select3({
+            inputType: 'Email',
+            placeholder: '请输入商品现价'
+        });
+        $('#example-name').select3({
+            inputType: 'Email',
+            placeholder: '请输入商品名称'
+        });
+        $('#example-title').select3({
+            inputType: 'Email',
+            placeholder: '请输入商品简介'
+        });
+        $('#example-1').select3({
+            allowClear: true,
+            items: ['极致美护', '全球零食','创意生活','时尚配饰','尖货女装','3C家电'],
+            placeholder: '请选择一级分类'
+        });
+        $('#example-4').select3({
+            allowClear: true,
+            items: ['早上新品', '全球好货','新品黑马'],
+            placeholder: '请选择特殊分类'
+        });
+        $('#example-2').select3({
+            allowClear: true,
+            items: [{
+                text: '极致美护',
+                children: [ { id: 11, text: '面膜' },{ id: 12, text: '化妆水' },{ id: 13, text: '洁面' },{ id: 14, text: '防嗮' },{ id: 15, text: '面霜' },{ id: 16, text: '卸妆' },{ id: 17, text: '精华' } ]
+            },{
+                text: '全球零食',
+                children: [ { id: 21, text: '饼干' },{ id: 22, text: '威化' },{ id: 23, text: '曲奇' },{ id: 24, text: '糕点' } ]
+            },{
+                text: '创意生活',
+                children: [ { id: 31, text: '厨房伴侣' },{ id: 32, text: '创意礼物' },{ id: 33, text: '个人护理' },{ id: 34, text: '品质生活' } ]
+            },{
+                text: '时尚配饰',
+                children: [ { id: 41, text: '饰品' },{ id: 42, text: '铰链' },{ id: 43, text: '奢侈' },{ id: 44, text: '包袋' },{ id: 45, text: '服饰配饰' } ]
+            },{
+                text: '尖货女装',
+                children: [ { id: 51, text: '裙装' },{ id: 52, text: '针织裙' },{ id: 53, text: '全身群' },{ id: 54, text: '休闲裤' },{ id: 55, text: '打底裤' } ]
+            },{
+                text: '3C家电',
+                children: [ { id: 61, text: '电脑' },{ id: 62, text: '冰箱' },{ id: 63, text: '茶具' },{ id: 64, text: '空调' } ]
+            }],
+            placeholder: '请选择二级分类'
+        });
+        $('#example-3').select3({
+            inputType: 'Email',
+            placeholder: '操作人编号'
+        });
+        $('#example-num').select3({
+            inputType: 'Email',
+            placeholder: '订单号'
+        });
+        $('#example-HistoryNum').select3({
+            inputType: 'Email',
+            placeholder: '流水号'
+        });
+        $('#example-style').select3({
+            allowClear: true,
+            items: ['银联', '支付宝','微信',"QQ钱包"],
+            placeholder: '请选择支付方式'
+        });
+        $('#example-HistoryStyle').select3({
+            allowClear: true,
+            items: ['银联', '支付宝','微信',"QQ钱包"],
+            placeholder: '请选择支付方式'
+        });
+        $('#example-tel').select3({
+            inputType: 'Email',
+            placeholder: '请输入手机号'
+        });
+        $('#example-juri').select3({
+            allowClear: true,
+            items: ['会员'],
+            placeholder: '请选择用户权限'
+        });
+        $("#begin").mdater({format:"YYYY-MM-DD"});
+        $("#end").mdater({format:"YYYY-MM-DD"});
+        $("#HistoryBegin").mdater({format:"YYYY-MM-DD"});
+        $("#HistoryEnd").mdater({format:"YYYY-MM-DD"});
+        $("#userBegin").mdater({format:"YYYY-MM-DD"});
+        $("#userEnd").mdater({format:"YYYY-MM-DD"});
+//    检查日期的合法输入
+        function checkTimeLegal(startDateStr,endDateStr){
+            if(startDateStr&&!endDateStr) {
+                $.showInfoMsg({
+                    title: "提示",
+                    text: "请输入结束日期",
+                    type: "msg",
+                    timer: 2000
+                });
+                return false;
+            }
+            if(!startDateStr&&endDateStr){
+                $.showInfoMsg({
+                    title: "提示",
+                    text: "请输入开始日期",
+                    type: "msg",
+                    timer: 2000
+                });
+                return false;
+            }
+
+//        判断结束日期是否合法
+            if(startDateStr&&endDateStr){
+
+                if(startDateStr>endDateStr){
+                    $.showInfoMsg({
+                        title: "提示",
+                        text: "开始日期不能大于结束日期",
+                        type: "msg",
+                        timer: 1500
+                    });
+                    return false;
+                }
+            }
+            return true;
+        }
+        //订单查询
+        $('#require').on("click",function(){
+            if(!checkTimeLegal($('#begin').val(),$('#end').val())){
+                return false;
+            }
+            $.showLoading("数据加载中");
+            setInterval(function(){
+                $(".loading").remove();
+                $('#dingdanList').css('display','block');
+                clearTimeout();
+            },1500)
+
+        })
+
+        //历史查询
+        $('#HistoryRequire').on("click",function(){
+            if(!checkTimeLegal($('#HistoryBegin').val(),$('#HistoryEnd').val())){
+                return false;
+            }
+            $.showLoading("数据加载中");
+            setInterval(function(){
+                $(".loading").remove();
+                $('#historyList').css('display','block');
+                clearTimeout();
+            },1500)
+
+        })
+        //用户信息查询
+        $('#userInfoRequire').on("click",function(){
+            if(!checkTimeLegal($('#userBegin').val(),$('#userEnd').val())){
+                return false;
+            }
+            $.showLoading("数据加载中");
+            setInterval(function(){
+                $(".loading").remove();
+                $('#userInfoList').css('display','block');
+                clearTimeout();
+            },1500)
+
+        })
+        //
+        $('input[type=file]').on('change',function(){
+            $('#file').text($(this).val())
+        })
+        //上架商品
+        $('.submit').on('click',function(){
+            var class1= $('#example-1').find('.select3-single-selected-item').text();
+            var class2= $('#example-2').find('.select3-single-selected-item').text();
+            var class3= $('#example-4').find('.select3-single-selected-item').text();
+            var name= $('#example-name').find('.select3-multiple-input').val();
+            var title= $('#example-title').find('.select3-multiple-input').val();
+            var oldprice= $('#example-oldprice').find('.select3-multiple-input').val();
+            var discount= $('#example-discount').find('.select3-multiple-input').val();
+            var newprice= $('#example-newprice').find('.select3-multiple-input').val();
+            var operator= $('#example-3').find('.select3-multiple-input').val();
+            var img = $('input[type=file]').val();
+            if(class1&&class2&&class3&&name&&title&&oldprice&&discount&&newprice&&operator&&img){
+                $.showLoading("数据加载中");
+                setInterval(function(){
+                    $(".loading").remove();
+                    $('#dingdanList').css('display','block');
+                    $.showInfoMsg({
+                        title: "提示",
+                        text: "保存成功",
+                        type: "msg",
+                        timer: 1500
+                    });
+                    clearTimeout();
+                },1500)
+            }else{
+                $.showInfoMsg({
+                    title: "提示",
+                    text: "请完善商品信息",
+                    type: "msg",
+                    timer: 1500
+                });
+            }
+        })
+        $('#div-head').on('click','.login',function(event){
+            event.preventDefault();
+            window.location.href="./login2.html"
+        })
+    })
+</script>
+</html>

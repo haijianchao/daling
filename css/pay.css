@@ -1,0 +1,96 @@
+.payment-callback {
+    margin-top: 20px;
+    padding-top: 80px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.payment-callback .ico-success {
+    background: url(http://img.cdn.daling.com/st/web/170310160629/styles/images/icon/ico_payment.png) no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.payment-callback .success-txt {
+    line-height: 50px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.f14 {
+    font-size: 14px;
+}
+.rede1 {
+    color: #e14958;
+}
+.payment-callback .text {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.payment-callback .pr40 {
+    padding-right: 40px;
+}
+.payment-callback .order-number {
+    text-decoration: underline;
+}
+.payment-callback .f24 {
+    font-size: 24px;
+}
+.payment-way {
+    padding-top: 26px;
+}
+.payment-way .title {
+    font-size: 14px;
+    line-height: 34px;
+    padding-left: 18px;
+}
+.payment-way-box {
+    border: 1px solid #e5e5e5;
+    padding: 10px 18px;
+}
+.payment-platform-pay {
+    border-bottom: solid 1px #e5e5e5;
+    padding-bottom: 18px;
+}
+.payment-way-box .title {
+    padding: 10px 0;
+}
+.payment-way .title {
+    font-size: 14px;
+    line-height: 34px;
+    padding-left: 18px;
+}
+.clearfix {
+    zoom: 1;
+}
+.payment-cyber-pay .each, .payment-platform-pay .each {
+    float: left;
+    width: 196px;
+}
+.payment-cyber-pay label, .payment-platform-pay label {
+    float: left;
+    width: 184px;
+}
+.payment-way-box label {
+    overflow: hidden;
+    display: block;
+    line-height: 32px;
+}
+.payment-way-box input {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 2px 10px 0 2px;
+}
+.payment-cyber-pay .text, .payment-platform-pay .text {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}

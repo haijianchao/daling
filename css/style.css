@@ -1,0 +1,614 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 12px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #666;
+}
+
+a, a:hover, a:visited {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+legend, td, th {
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    background-color: transparent;/*透明*/
+}
+li{
+	list-style: none;
+}
+input {
+    line-height: normal;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+}
+button {
+    overflow: visible;
+    background-color: #e14958;
+    border: 1px solid #e14958;
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+    align-items: center;
+}
+.clear:after{content:"";/*里面可以为空、内容的意思*/
+				visibility:hidden; /*隐藏*/
+				height:0;
+				display:block;
+				clear:both;
+				overflow:hidden;
+}
+.clear{zoom:1;/*这个转为解决IE6的bug的*/}
+
+/*------------------------底部-----------------------------*/
+
+/*底部 1css*/
+#foot .foot_assure {
+    background-color: #fff;
+    height: 79px;
+    line-height: 79px;
+    border-bottom: solid 1px #e0e0e0;
+    box-shadow: 0 2px 2px #e0e0e0;
+    border-top: solid 1px #d8d8d8;
+}
+
+.foot_assure ul {
+    width: 960px;
+    margin: 0 auto;
+}
+/*ul 的第一个li*/
+.foot_assure li:first-child {
+    margin-left: 0;
+}
+/*li样式*/
+.foot_assure li {
+    float: left;
+    margin-left: 130px;
+    font-size: 14px;
+}
+/*第一个li后的箭头图标*/
+.foot_assure .icon {
+    width: 22px;
+    height: 41px;
+    margin-left: 50px;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) no-repeat -2px -135px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*后三个图标*/
+.foot_assure .assure_1,.foot_assure .assure_2,.foot_assure .assure_3 {
+    vertical-align: middle;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+.foot_assure .assure_1{
+	    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-assure.png) no-repeat;
+}
+.foot_assure .assure_2{
+	    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-assure.png) no-repeat -36px 0 ;
+}
+.foot_assure .assure_3{
+	    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-assure.png) no-repeat -73px 0 ;
+}
+
+/*鹿晗 宣传*/
+#foot .foot_investor{
+	    width: 1110px;
+	    margin: 0 auto;
+	    padding: 24px 0 40px 42px;
+	    border-bottom: solid 1px #d8d8d8;
+}
+/*这块的第一个孩子  第一个 dl*/
+.foot_investor .first {
+    width: 660px;
+    float: left;
+}
+/*第二个  dl样式*/
+.foot_investor .second {
+    overflow: hidden;
+}
+.foot_investor dt {
+    font-size: 18px;
+    line-height: 40px;
+}
+.foot_investor dd {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*版权*/
+.foot_copyright {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.f14 {
+    font-size: 14px;
+}
+.foot_copyright table {
+    margin: 20px auto 0;
+    width: 530px;
+}
+/*三个 图片样式*/
+.foot_copyright table a, .foot_copyright table span {
+    float: left;
+    margin-right: 2px;
+}
+.foot_copyright table img, .foot_copyright table span {
+    width: 114px;
+    height: 41px;
+    border: 0;
+}
+/*第三个 样式*/
+.foot_copyright table span {
+    display: inline-block;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_zfb.jpg) no-repeat;
+}
+
+.foot_copyright p {
+    padding: 20px 0 0;
+}
+
+/*头部********************************************************************8*/
+#head {
+    width: auto;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 30px;
+    z-index: 5;
+}
+#head-inner {
+    width: 1200px;
+    margin: auto;
+    height: 30px;
+    position: relative;
+}
+/*a标签 hover 红色*/
+#head-inner>a:hover, .head-right a:hover {
+    color: #e14958;
+}
+/*子元素a 样式 */
+#head-inner>a {
+    float: left;
+    line-height: 30px;
+}
+/*导航右部分*/
+.head-right {
+    position: absolute;
+    right: 40px;
+    display: inline-block;
+    line-height: 32px;
+}
+.yidenglu{
+    display: none;
+}
+/*  | 样式*/
+#head .line{
+	padding: 0 6px;
+}
+/*电话小图标*/
+.ico-phone {
+    background-position: -26px -151px;
+    width: 13px;
+    height: 13px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    margin-top: -2px;
+}
+
+#head .da-app{
+	position: relative;
+}
+/*二维码*/
+#head .da-code{
+    border: 1px solid #ececec;
+    background-color: #e5e5e5;
+    padding: 15px;
+    width: 91px;
+    right: -30px;
+    top: 28px;
+    display: none;
+    z-index: 2;
+    position: absolute;
+}
+/*二维码 小三角*/
+#head .da-code .arrow{
+	border-width: 7px 5px;
+    border-style: solid;
+    border-color: transparent transparent #e5e5e5;
+    right: 54px;
+    top: -14px;
+    position: absolute;
+}
+/*二维码*/
+#head .da-code .pic-code{
+	background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/cod_da.png) no-repeat;
+    width: 91px;
+    height: 91px;
+    display: block;
+}
+
+/*注册 有礼*/
+#head .da-reg-tip {
+    background: #6a4084;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 2;
+    padding: 0 5px;
+    top: 25px;
+    border-radius: 3px;
+    left: 40px;
+    color: #fff;
+}
+/*内容*/
+.da-reg-tip:before {
+    content: "注册即得 新人专享优惠券";
+}
+/* x 关闭 */
+.reg-close {
+    height: 18px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 4px;
+    color: #fff;
+    
+}
+.reg-close:hover{
+	text-decoration: none;
+}
+/*注册  有礼 三角*/
+.reg-close:after {
+    content: "";
+    font-size: 0;
+    position: absolute;
+    left: 12px;
+    top: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #6a4084;
+}
+/*banner图***************************************************************************************/
+#banner{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+}
+/*logo*/
+#banner .logo{
+	float: left;
+    width: 280px;
+    height: 60px;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/logo.png) no-repeat;
+}
+/*优惠劵领取*/
+#banner .youhui{
+	background: url(http://img.cdn.daling.com/data/files/mobile/2016/09/05/14730673217720.gif) no-repeat center center;
+    background-size: cover;
+    width: 120px;
+    height: 100px;
+    float: left;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+#banner form {
+    padding-right: 40px;
+}
+/*首页 头部 购物车 图标*/
+.head-cart {
+    width: 168px;
+    height: 38px;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    float: right;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/da-header-cart-bg.jpg) 15px 7px no-repeat #f2f2f2;
+    position: relative;
+}
+/*变红*/
+.head-cart:hover a{
+	color:#e14958;
+	text-decoration: none;
+}
+/*购物车  内 a标签 颜色*/
+.head-cart a {
+    line-height: 38px;
+    text-indent: 60px;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/da-header-cart-bg2.png) 150px 13px no-repeat;
+}
+/*购物车  物品数量*/
+.head-cart span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    top: -5px;
+    right: 21px;
+    color: #fff;
+    font-size: 12px;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/da-header-cart-bg1.png) no-repeat;
+}
+/*搜索块*/
+.head-search{
+	float: right;
+    width: 394px;
+    position: relative;
+    margin-right: 70px;
+}
+/*输入框*/
+.head-search .s-keyword{
+    width: 301px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5px;
+    border: 1px solid #6b4185;
+    position: absolute;
+    right: 81px;
+}
+/*搜索*/
+.head-search button {
+    width: 81px;
+    height: 38px;
+    border: 1px solid #6b4185;
+    line-height: 38px;
+    background-color: #6b4185;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+}
+/*热搜*/
+.head-search .search-hot {
+    margin-top: 45px;
+    margin-bottom: 24px;
+    height: 18px;
+    overflow: hidden;
+}
+.head-search .search-hot a {
+    white-space: nowrap;
+    zoom: 1;
+}
+.head-search .search-hot a:hover {
+    color: #e14958;
+}
+/*nav导航***************************************************************************/
+.nav {
+    width: 100%;
+    min-width: 1200px;
+    background-color: #333;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 3;
+}
+.nav .nav-inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav-inner a:hover {
+    color: #e14958;
+}
+/*分类*/
+.fenlei {
+    float: left;
+    font-size: 16px;
+    width: 220px;
+    background-color: #654579;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+/*全部分类*/
+.fenlei .fenlei-title {
+    text-align: center;
+    color: #fff;
+}
+/*分类里 的 mouseover 的箭头*/
+.fenlei .ico-down, .fenlei .ico-up {
+    vertical-align: middle;
+    width: 11px;
+    height: 7px;
+    margin-left: 13px;
+}
+.fenlei .ico-down {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) -5px -120px no-repeat;
+    display: none;
+}
+.fenlei .ico-up {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) -25px -120px no-repeat;
+    display: inline-block;
+}
+/*nav 右部分*/
+.navigation {
+    font-size: 16px;
+    overflow: hidden;
+    padding-left: 30px;
+}
+.navigation li {
+    float: left;
+    padding: 0 10px;
+    margin-right: 37px;
+}
+.navigation li a {
+    color: #fff;
+}
+.navigation li a:hover{
+	color: #C4C4C4;
+	text-decoration: none;
+}
+/*分类 里的 详细分类*/
+.fenlei .dd {
+    background-color: #e8e3eb;
+    width: 220px;
+    position: absolute;
+    color: #666;
+    display: none;
+    height: 479px;
+}
+/*每一大类 一个 dl*/
+.fenlei dl {
+    padding: 25px 20px 0;
+    border: 1px solid #e8e3eb;
+    height: 93px;
+}
+/*.fenlei dl:hover{
+    background-color: #fff;
+    border: 1px solid #654579;
+    border-right-color: #fff;
+    width: 179px;
+}*/
+/*一大类的 标题 样式*/
+.fenlei .dd dl dt {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 16px;
+}
+/*图标*/
+.fenlei .ico-category img {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+/* 第一个 dd*/
+.fenlei .category-sort {
+    line-height: 22px;
+    height: 43px;
+    position: relative;
+    padding-right: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px dotted #d9d9d9;
+    width: 168px;
+}
+.fenlei .category-sort a {
+    white-space: nowrap;
+    margin-right: 6px;
+}
+/*详细分类的 块*/
+.fenlei .sort-box {
+    height: 44px;
+    overflow: hidden;
+    font-size: 12px;
+}
+/*小三角 箭头*/
+.fenlei .ico-arrow2 {
+    border-width: 2px 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent #9e9e9e;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 22px;
+}
+/*第二个 dd*/
+.fenlei .category-drop {
+    width: 600px;
+    min-height: 443px;
+    overflow: hidden;
+    position: absolute;
+    left: 220px;
+    top: 0;
+    background-color: #fff;
+    padding: 20px 40px 15px;
+   	display: none;
+    border: 1px solid #654579;
+}
+.fenlei .hot-brand {
+    padding-bottom: 40px;
+}
+/*第二个 dd的 热搜标题*/
+.fenlei .hot-brand-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+}
+/*热搜 图片 块*/
+.fenlei .hot-brand-box {
+    margin-left: -13px;
+}
+/*每个 图片外的 a标签*/
+.fenlei .hot-brand-box a {
+    float: left;
+    width: 140px;
+    height: 70px;
+    margin-left: 13px;
+    background-position: center center;
+    background-size: cover;
+}
+/*第二块 dd下面 的 详细分类*/
+.fenlei .category-data {
+    overflow: hidden;
+}
+/*右侧大图*/
+.fenlei .category-data .brand-ad{
+    float: right;
+    width: 293px;
+    height: 270px;
+    display: block;
+}
+/*左侧列表*/
+.fenlei .category-data-left {
+    overflow: hidden;
+    font-size: 12px;
+}
+/*每一行*/
+.fenlei .category-data-2 {
+    margin-bottom: 20px;
+}
+/*每小类 的 标题*/
+.fenlei .item {
+    float: left;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: 700;
+}
+/*每个小类 下面的  子类*/
+.fenlei .data {
+    overflow: hidden;
+    width: 208px;
+    line-height: 22px;
+}
+/*每个子类的  样式*/
+.fenlei .data a {
+    margin-right: 20px;
+    white-space: nowrap;
+}

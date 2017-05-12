@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/cart.css" />
+    <link rel="stylesheet" type="text/css" href="css/orderInfo.css" />
+    <link rel="stylesheet" type="text/css" href="css/pay.css" />
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery.validate.messages_zh.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/cart-fix.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/orderInfo.js"></script>
+</head>
+<body>
+<!--头部导航------------------------------------------------------->
+<div id="div-head">
+</div>
+<!--达令 购物车---------------------------------------------->
+<div class="da-cart">
+    <!--购物车 头部 top-->
+    <div class="cart-top clear">
+        <a href="index.html" class="logo"></a>
+        <!--购物步骤-->
+        <div class="cart-step clear">
+            <ul class="clear">
+                <!--第一步 查看购物车-->
+                <li class="step-1 c-pre">
+                    <span class="triangle"></span>
+                    <span class="ico-number1">1</span>
+                    查看购物车
+                </li>
+                <!--第二步 确认订单信息-->
+                <li class="step-2 c-pre">
+                    <span class="triangle"></span>
+                    <span class="ico-number1">2</span>
+                    确认订单信息
+                </li>
+                <!--第三步 成功提交订单-->
+                <li class="step-3 current">
+                    <span class="ico-number1">3</span>
+                    成功提交订单
+                </li>
+            </ul>
+        </div><!--头部序号步骤-->
+
+        <!-- 支付成功-->
+        <div class="payment-callback">
+            <div class="callback-info">
+                <p class="ico-success"></p>
+
+                <p class="success-txt">
+                <span class="f14">
+                                            订单已提交，请于48小时内完成支付
+                                    </span>
+                    <span class="rede1">（逾期订单将被取消）</span>
+                </p>
+                <p class="text">
+                <span class="pr40">
+                    共1张订单：
+                    <a href="/index.php?_c=order&amp;_a=orderDetail&amp;order_id=9474163" target="_blank" class="order-number">
+                        170744795900001
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>
+                        应付金额：
+                        <span class="rede1">
+                            ¥<span class="f24">0.00</span>
+                        </span>
+                    </span>
+                </span>
+                </p>
+            </div>
+        </div>
+        <div class="payment-way">
+            <div class="title">支付方式</div>
+            <div class="payment-way-box">
+                <!--平台支付-->
+                <div class="payment-platform-pay">
+                    <div class="title">平台支付</div>
+                    <div class="way-data clearfix">
+                        <div class="each clearfix">
+                            <label>
+                                <input type="radio" checked="" class="pay-data" name="payment_code" value="alipay">
+                                <img src="http://img1.cdn.daling.com/st/web/img/bank/ZFB1.png">
+                                <p class="text">支付更方便，更安全</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--网银支付-->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--结算行   总计-->
+        <div class="jiesuan">
+            <div class="total-box clear">
+                <div class="toolbar clear">
+                    <a href="#" class="btn-count btn-count-3">立即支付</a>
+                    <div class="total-count" style=" padding-top: 17px;">
+                        <!--总金额-->
+                        <p>
+                            <span class="item">应付金额：</span>
+									<span class="sumprice red">¥
+										<span class="f20">0.00</span>
+									</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--结算 结尾-->
+
+    </div><!--cart-top-->
+</div><!--da-cart-->
+
+<!--底部---------------------------------------------------------------->
+<div id="div-foot">
+</div>
+
+
+<!--右侧定位购物车------------------------------------------------------->
+<div class="da-sidebar clear" style="width: 40px;">
+    <!--点击展开 -->
+    <div class="sidebar-function">
+        <!--购物车-->
+        <div class="sb-cart sidebar-btn">
+            <!--分割线-->
+            <p class="cut-line"></p>
+            <!--购物车图标-->
+            <span class="ico-cart"></span>
+            <p class="cart-name">
+                购<br />物<br />车
+            </p>
+            <!--购物车商品数量-->
+            <span class="ico-number">0</span>
+        </div>
+        <!--分割线-->
+        <p class="cut-line"></p>
+        <!--优惠券-->
+        <div class="sb-promo sidebar-btn sidebar-posi">
+            <span class="ico-promo"></span><!--¥图标-->
+            <strong>我的优惠券
+                <em></em><!--指向小箭头-->
+            </strong>
+        </div>
+        <!--我的收藏-->
+        <div class="sb-collect sidebar-btn sidebar-posi">
+            <span class="ico-collect"></span><!--我的收藏 ❤-->
+            <strong>我的收藏
+                <em></em><!--指向小箭头-->
+            </strong>
+        </div>
+        <!--二维码-->
+        <div class="qrcode">
+            <div class="qrcode-pop"><!--二维码块-->
+                <span class="qrcode-arrow"></span><!--三角箭头-->
+                <div class="qrcode-img"></div><!--二维码图-->
+                <p>到手机达令</p>
+            </div>
+        </div>
+        <!--回到顶部-->
+        <a href="#" class="goTop" title="返回顶部" style="display: none;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3QkQzNTRERUVBNUUxMUUzODcyNzk2RTM5MkZCREQ2OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3QkQzNTRERkVBNUUxMUUzODcyNzk2RTM5MkZCREQ2OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdCRDM1NERDRUE1RTExRTM4NzI3OTZFMzkyRkJERDY5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdCRDM1NERERUE1RTExRTM4NzI3OTZFMzkyRkJERDY5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+tblnnAAAAPBJREFUeNrs10EWgiAUBdDgtCP3vwTWRE2YlJXfo0F038iJHs/li49Ua73IcxIYMGDAgAEDBgwYMGDACBgwYMCAAQMGTDillHbZXiRF7l+W5ZT3yoMsUH1x3S15MJRhcHLnz6gGweaH+YDSHScPjNIVJw+O0g1nlL+SHvOmx+zK7D1muIABAwYMGDAT9pitjfbeO1KwAadI+23PNzEn5XrUgx5Xqk3EhhVMwfNRWmu+O89gJgYMmB/ZY76YeuTp3MT8wcSs/pVMjM0XjD0m2HBNzNSnazBgwFAAAwYMGDBgwIABAwaMgAEDBgyY7rkJMABdBLUSAt7mFQAAAABJRU5ErkJggg==" />
+        </a>
+    </div><!--工具栏-->
+    <!--工具栏 内容页-->
+    <div class="sidebar-data">
+        <!--x-->
+        <div class="close" style="display: none;"></div>
+        <!--购物车内容-->
+        <div class="cart-mini  sidebar-show" style="display: block;">
+            <!--头-->
+            <div class="cart-head">我的购物车</div>
+            <div class="cart-mini-ct">
+                <!--没有购物 显示一个购物车-->
+                <div class="cart-table-none"></div>
+
+                <!--添加商品后-->
+                <div class="cart-list" style="display: none;">
+                    <!--每个商品一个 ul-->
+                    <ul class=" clear goods">
+                        <!--商品信息-->
+                        <li class="td td-good">
+                            <a href="xiangqing.html" class="clear"  target="_blank"  title="[Elizabeth Arden]雅顿绿茶香氛保湿身体乳500ml">
+                                <img class="img" src="http://img.cdn.daling.com/data/files/mobile/2016/09/19/1474274799623.jpg" />
+                            </a>
+                            <a href="javascript:;" class="clear title-name" target="_blank">
+                                <span class="title">[Elizabeth Arden]</span><br />
+                                <span>雅顿绿茶香氛保湿身体乳500ml</span>
+                            </a>
+                        </li>
+                        <!--数量加减-->
+                        <li class="td td-number">
+                            <div class="clear">
+                                <!--减-->
+                                <a href="javascript:;" class="btn-number f1 btn-reduce">
+                                    <span class="ico-reduce"></span>
+                                </a>
+                                <!--数量input-->
+                                <input type="text" value="1" class="number-in" />
+                                <!--加-->
+                                <a href="javascript:;" class="btn-number btn-add f1">
+                                    <span class="ico-add"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <!--价格小计-->
+                        <li class="td td-total">
+                            ¥<span class="total">315.00</span>
+                        </li>
+                        <!--删除-->
+                        <li class="td td-handle">
+                            <a href="javascript:;">删除</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--购物车列表-->
+            <!--mini结算块-->
+            <div class="cart-bar clear">
+							<span class="info">
+								共<span class="count">0</span>件商品&nbsp;共计
+								<span class="amount">
+									¥<span>0.00</span>
+								</span>
+							</span>
+                <a class="go-cart" href="cart.html">去购物车</a>
+            </div><!--mini结算块-->
+
+        </div><!--mini  cart-->
+
+
+    </div><!--购物车 内容页-->
+</div>
+</body>
+<script>
+    $('.rede1 span').text($.cookie('pay-num'));
+</script>
+</html>

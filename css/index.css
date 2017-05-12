@@ -1,0 +1,486 @@
+
+/*分类 里的 详细分类*/
+.fenlei .dd {
+    background-color: #e8e3eb;
+    width: 220px;
+    position: absolute;
+    color: #666;
+    display: block!important;
+    height: 479px;
+}/*主要内容*/
+.index {
+    background-color: #f9f9f9;
+    padding-bottom: 50px;
+    min-width: 1200px;
+}
+/*轮播++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.lunbo{
+	margin: 0;
+    padding: 0;
+    zoom: 1;
+    z-index: 1;
+    height: 481px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.lunbo ul li{
+    width: 100%;
+    float: left;
+    margin-right: -100%;
+	position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    height: 480px;
+    background:rgb(253, 240, 121);
+}
+/*序号*/
+.lunbo-xuhao {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    z-index: 2;
+}
+.lunbo-xuhao li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 20px;
+}
+.lunbo-xuhao li a{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    background: #666;
+    background: rgba(0,0,0,.5);
+    cursor: pointer;
+    color: #fff;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    -o-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+}
+/*--商品 内容---------------------------------------------------------------------*/
+.index-main {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+.index-title {
+    width: 430px;
+    height: 1px;
+    background-color: #676767;
+    margin: 0 auto 16px;
+    position: relative;
+    font-size: 30px;
+}
+/*发现 好货*/
+.index-title p {
+    position: absolute;
+    top: -22px;
+    left: 130px;
+    text-align: center;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+}
+/*每日必看 h2标签*/
+.index-main h2 {
+    font-weight: 400;
+    padding-bottom: 14px;
+    position: relative;
+    padding-top: 34px;
+    font-size: 16px;
+    margin-left: 11px;
+}
+/*每栏头部 小图标*/
+.ico-title-must, .ico-title-new, .ico-title-time, .ico-title-worth {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 38px;
+    line-height: 32px;
+    margin-right: 10px;
+}
+/*必看小图标*/
+.ico-title-must {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-title.png) no-repeat;
+}
+.p28 {
+    padding-left: 28px;
+}
+/*必看 图片显示 块*/
+.index-must .index-must-box {
+    margin-left: -16px;
+    height: 294px;
+    overflow: hidden;
+}
+/*每个图 一个 li*/
+.index-must .index-must-box li {
+    margin-left: 16px;
+    border: 1px solid transparent;
+    float: left;
+}
+.index-must .index-must-box li a {
+	display: block;
+    width: 590px;
+    height: 282px;
+    background-position: center center;
+    background-size: cover;
+}
+/*阴影*/
+.index-must .index-must-box li a:hover,.index-new ul li:hover,.index-good-list ul li:hover,.index-newest ul li:hover,.index-worth-img li a:hover{
+	box-shadow: 1px 1px 5px #b6b6b6;
+}
+/*每日上新 更新按钮*/
+.index-main h2 .change {
+    position: absolute;
+    right: 40px;
+    font-size: 14px;
+    background-color: #e14958;
+    color: #fff;
+    width: 90px;
+    height: 29px;
+    text-align: center;
+    line-height: 29px;
+}
+/*每日上新 更新按钮 背景图*/
+.ico-refresh {
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    background-position: 0 -136px;
+    width: 23px;
+    height: 18px;
+    margin-left: 8px;
+}
+/*新品块  ul统一样式*/
+.index-new ul {
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+/*新品块  ul li统一样式*/
+.index-new ul li {
+    background-color: #fff;
+    width: 283px;
+    height: 378px;
+    border: 1px solid #e5e5e5;
+    margin-left: 20px;
+    float: left;
+}
+/*img外的  块*/
+.index-new ul li .new-li-img{
+	display: inline-block;
+	position: relative;
+}
+/*新品块  ul  内img统一样式*/
+.index-new ul li a img {
+    width: 283px;
+    height: 268px;
+    display:block;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+/*商品信息块*/
+.index-new ul li .data {
+    padding: 8px 26px 0;
+}
+/*价格*/
+.index-new ul li .data .price {
+    padding-bottom: 8px;
+}
+/*收藏*/
+.index-new ul li .data .price .collect {
+    line-height: 30px;
+    float: right;
+}
+/*红色*/
+.red {
+    color: #e14958;
+}
+/*当前价格*/
+.now-price {
+    font-size: 20px;
+    color: #e14958;
+}
+/*旧价格 样式  删除线*/
+.old-price, .sidebar-collect .old-price {
+    text-decoration: line-through;
+}
+/*简介*/
+.index-new ul li .data .title {
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+    color: #666;
+}
+/*第二个  ul的 一些特殊样式*/
+.index-new .w589 li {
+    width: 587px;
+    height: 238px;
+    position: relative;
+}
+.index-new .w589 li .data {
+    width: 230px;
+    float: right;
+    padding: 80px 24px 0 50px;
+}
+.index-new .w589 li a{
+	height: 238px;
+}
+.index-new .w589 li a img {
+    height: 238px;
+    float: left;
+}
+/*每个 li隐藏的加入购物车 框*/
+.index-new ul li a .option {
+     width: 283px;
+     height: 30px; 
+     font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #895ca5;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+/*加入购物车的 图标*/
+.index-new ul li a .ico-g-cart {
+    background-position: left -88px;
+    width: 18px;
+    margin-top: -5px;
+    vertical-align: middle;
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    display: inline-block;
+    height: 16px;
+    margin-left: 7px;
+}
+/*神马 值得买----------------------------------------------------------------------------------*/
+/*神马 值得买 icon*/
+.ico-title-worth {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-title.png) 0 -78px no-repeat;
+}
+/*全球好货          大家都说好 */
+.index-main h3 {
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 36px;
+    zoom: 1;
+}
+/*全球好货  大家都说好  共有样式  icon*/
+.ico-title-1 {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-title-1.png) no-repeat;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*全球好货 列表 box*/
+.index-worth .index-worth-box{
+    background-color: #fff;
+    padding-bottom: 52px;
+    margin-bottom: 42px;
+    padding-top: 42px;
+}
+/*全球好货 列表 图片 */
+.index-worth .index-worth-box .index-worth-img{
+    margin-left: 30px;
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+}
+
+.index-worth .index-worth-box .index-worth-img li {
+    float: left;
+    width: 208px;
+    margin: 0 10px;
+}
+.index-worth .index-worth-box .index-worth-img li a{
+    display: block;
+    width: 208px;
+    height: 140px;
+}
+
+/*--大家都说好-------------------------------------------------------------------------------*/
+/*-box-*/
+.index-good {
+    background-color: #fff;
+    margin-bottom: 42px;
+}
+/*--选项卡 / TAB页样式--*/
+.index-good .index-good-tab{
+    padding-top: 42px;
+    border-bottom: solid 1px #e5e5e5;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 36px;
+    margin-bottom: 40px;
+}
+/*li第一个默认 变红  或者 点击后变红*/
+.index-good .index-good-tab li.active{
+    border: 1px solid #e14958;
+    border-bottom: none 0;
+    background-color: #e14958;
+    color: #fff;
+}
+/*li样式*/
+.index-good .index-good-tab li {
+    float: left;
+    margin-right: 10px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #e5e5e5;
+    border-bottom: none 0;
+    height: 29px;
+    line-height: 29px;
+    cursor: pointer;
+}
+/* 大家都说好  列表*/
+.index-good-list {
+    margin-left: -33px;
+}
+/* 大家都说好 /黑马  列表  内  li*/
+.index-good-list li,.index-newest li  {
+    float: left;
+    width: 280px;
+    margin-left: 100px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+}
+/*特别商品标签*/
+.sign {
+	display: inline-block;
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: 0 0;
+    margin-right: 0;
+    text-align: right;
+}
+/* 大家都说好   黑马  列表  每个 的 img*/
+.index-good-list .cover-img,.index-newest .cover-img{
+	    display: block;
+}
+.index-good-list .cover-img img,.index-newest .cover-img img {
+    width: 280px;
+    height: 280px;;
+    background-position: center center;
+    background-size: cover;
+}
+/*商品详情*/
+.index-good-list .data,.index-newest .data {
+    padding-left: 12px;
+}
+/*价格快*/
+.index-good-list .price ,.index-newest .price{
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+/*商品介绍*/
+.index-good-list .title,.index-newest .title {
+    margin-bottom: 10px;
+    height: 38px;
+    overflow: hidden;
+    line-height: 18px;
+    display: block;
+}
+/*商品评价*/
+.index-good-list .comment,.index-newest .comment {
+    width: 256px;
+    height: 50px;
+    background-color: #fffcdb;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    border-radius: 25px;
+    position: relative;
+}
+/*用户头像*/
+.index-good-list .comment .face {
+    width: 35px;
+    height: 35px;
+    float: left;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 7px;
+    display: block;
+}
+/*评论*/
+.index-good-list .comment-text,.index-newest .comment-text {
+    position: absolute;
+    z-index: 2;
+    left: 56px;
+    top: 6px;
+    width: 180px;
+    line-height: 20px;
+    	color: #000;
+}
+/*评论列举*/
+ .index-good-list .comment-text p {
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*新品黑马----------------------------------------------------------------------*/
+
+.index-newest {
+    background-color: #fff;
+    margin-bottom: 55px;
+    padding-top: 42px;
+    zoom: 1;
+}
+.index-newest ul{
+    margin-left: -33px;
+}
+.index-newest .comment-text{
+	left: 30px;
+}
+/*买了又买+++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*DIV*/
+.index-buy-again {
+    background-color: #fff;
+    margin-bottom: 42px;
+        margin-left: 10px;
+}
+/*每一列*/
+.index-buy-again dl {
+    float: left;
+    width: 394px;
+}
+/*每列 头部标题*/
+.index-buy-again dt {
+    line-height: 46px;
+    text-align: center;
+    border-bottom: solid 1px #eee;
+    font-size: 16px;
+    color: #e14958;
+}
+.index-buy-again .first {
+    padding: 38px 20px 10px;
+}
+.index-buy-again dd {
+    position: relative;
+    border-bottom: solid 1px #eee;
+}

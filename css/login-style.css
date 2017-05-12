@@ -1,0 +1,339 @@
+/*登录 头部 css*/
+#login_head{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+    padding: 20px 0;
+}
+#login_head .logo{
+	display: block;
+    float: left;
+    width: 280px;
+    height: 60px;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/logo.png) no-repeat;
+}
+/*达令 登录 bg */
+#da_login_bg {
+    background: #f9fbfd;
+    border-top: solid 1px #d8d8d8;
+}
+.da_login_index {
+    width: 1200px;
+    margin: 0 auto;
+    height: 660px;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/login_bg.png?a=1) 80px 40px no-repeat #f9fbfd;
+}
+/*右侧登录框*/
+.login_right {
+    width: 390px;
+    height: 446px;
+    float: right;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 20px 30px;
+    margin-top: 45px;
+    margin-right: 80px;
+}
+/*达令会员*/
+.login_panel h2 {
+    line-height: 30px;
+    border-left: 3px solid #7d589d;
+    font-size: 16px;
+    font-weight: 400;
+    text-indent: 10px;
+    margin-bottom: 24px;
+}
+/*登录注册tab页*/
+.login_panel .tabs{
+    width: 282px;
+    border-bottom: 1px solid #7d589d;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+.login_panel .tabs a {
+    display: block;
+    float: left;
+    height: 28px;
+    width: 70px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 36px;
+}
+/*激活后下面的小三角*/
+.login_panel .tabs a.active {
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/login_arr.png);
+    background-position: 0 18px;
+    background-repeat: no-repeat;
+}
+/*登录/注册表单*/
+.login_panel .login_form, .login_panel .register_form {
+    margin: 40px 0 0 30px;
+    width: 320px;
+    font-size: 15px;
+    display: none;
+}
+/*input外边框样式*/
+.login_panel .login_form .ctrl, .login_panel .register_form .ctrl {
+    margin-bottom: 20px;
+}
+form .ctrl {
+    position: relative;
+}
+/*input 激活后外边框样式*/
+.ctrl.current .login_sign {
+    border-right: solid 1px #94d469;
+}
+/*头像 外框*/
+.login_sign {
+    width: 40px;
+    height: 38px;
+    display: block;
+    top: 1px;
+    left: 1px;
+    border-right: solid 1px #ccc;
+    position: absolute;
+}
+/*头像 密码 图标*/
+.ico_password, .ico_user {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 19px;
+    margin: 10px 0 0 10px;
+}
+/*头像*/
+.ico_user {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) -29px 0 no-repeat;
+}
+/*激活后 头像*/
+.ctrl.current .ico_user {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) no-repeat;
+}
+/*激活后 头像右 边框 变绿*/
+.ctrl.current .login-sign {
+    border-right: solid 1px #94d469;
+}
+/*激活后 input边框 变绿*/
+.ctrl.current input {
+    border: 1px solid #94d469!important;
+}
+/*输入框样式*/
+.login_panel .login_form input, .login_panel .register_form input {
+    width: 265px;
+    height: 36px;
+    padding-left: 55px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+}
+/*出错后 input 加红*/
+form .error {
+    border: 1px solid #e14958!important;
+    background: #fdf3fd;
+}
+/*密码 图标*/
+.ico_password {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) -29px -27px no-repeat;
+}
+/*激活后*/
+.ctrl.current .ico_password {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) 0 -27px no-repeat;
+}
+/*忘记密码*/
+.login_panel .login_form .forgot, .login_panel .register_form .forgot {
+    font-size: 12px;
+    text-align: right;
+    clear: both;
+}
+/*登录 注册 样式*/
+.login_panel .login_form .submit_btn, .login_panel .register_form .submit_btn {
+    background: #e14958;
+    width: 320px;
+    height: 40px;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 700;
+}
+/*button样式 获取手机验证码样式*/
+.login_panel .login_form button, .login_panel .register_form button {
+    float: right;
+    background: #94d469;
+    border: none;
+    width: 100px;
+    height: 28px;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 7px;
+}
+/*label样式*/
+form .ctrl label.error {
+    position: absolute;
+    background: #000;
+    background: rgba(0,0,0,.75);
+    filter: alpha(opacity=75);
+    border-radius: 3px;
+    z-index: 10;
+    left: 6px;
+    height: 30px;
+    border: none!important;
+}
+/*label样式*/
+form .ctrl label.error, form .form-error {
+    line-height: 30px;
+    display: block;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 0 10px;
+    white-space: nowrap;
+    bottom: -38px;
+    font-size: 12px!important;
+}
+/*给label上三角 设置样式*/
+form .ctrl label.error:after {
+    left: 30px;
+    height: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-bottom-color: #000;
+    border-top-width: 0;
+    display: block;
+    z-index: 20;
+}
+/*给label设置上三角 */
+form .ctrl label.error:after, form .form-error:after {
+    content: ' ';
+    top: -5px;
+    width: 0;
+    opacity: .75;
+}
+/*----------------------------------*/
+.login_panel .register_form .verify,.login_panel .register_form .sms {
+    width: 145px;
+    margin-right: 16px;
+}
+/*手机验证码 小图标  激活后*/
+.ctrl.current .ico_msgcode {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) 0 -56px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 23px;
+    margin: 8px 0 0 10px;
+}
+/*验证码*/
+.yzm {
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+    float: right;
+    width: 100px;
+    height: 28px;
+    margin-top: 7px;
+}
+/*手机验证码 小图标*/
+.ico_msgcode {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico-login.png) -29px -56px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 23px;
+    margin: 8px 0 0 10px;
+}
+/*错误提示 样式*/
+.login_panel .login_form .ctrl p, .login_panel .registe_form .ctrl p {
+    margin-top: 6px;
+    color: #a00;
+}
+/*协议颜色*/
+.login_panel .register_form .Agreement a {
+    color: #00F;
+}
+/*协议前 input*/
+.login_panel .register_form .Agreement input {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.checked{
+	checked:'';
+}
+/*同意协议签前  灰色注册*/
+ .login_panel .register_form .dispabled {
+    background: #ccc;
+}
+/*同意协议签后  红色注册*/
+.red{
+	background: #e14958!important;
+}
+/*用户协议块*/
+.xieyi{
+	display: none;
+    margin-left: -300px;
+    margin-top: -200px;
+    width: 600px;
+    height: 400px;
+    margin: -222px 0 0 -300px;
+    position: fixed;
+    padding: 20px 30px;
+    border: 2px solid #5C5C5C;
+    background: #fff;
+    z-index: 202;
+    top: 50%;
+    left: 50%;
+}
+/*协议头部*/
+.xieyi .xieyi-title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+}
+/*X*/
+.xieyi .xieyi-title em {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/bg/login-close.png);
+}
+/*协议内容*/
+.xieyi .article {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 24px;
+}
+/*协议 小标题*/
+.xieyi .article .p1 {
+    font-size: 16px;
+    margin: 16px 0 20px;
+}
+/*协议公告同意按钮*/
+.button-sure {
+    float: right!important;
+    display: block!important;
+    width: 142px!important;
+    height: 38px!important;
+    text-align: center!important;
+    line-height: 38px!important;
+    overflow: visible!important;
+    background-color: #e14958!important;
+    border: 1px solid #e14958!important;
+    color: #fff!important;
+    display: inline-block!important;
+    padding: 0!important;
+    align-items: center!important;
+}
+button{
+	cursor: pointer;
+}

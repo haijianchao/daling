@@ -1,0 +1,627 @@
+/*内容快*/
+.da-detail {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+/*当前位置导航*/
+.da-detail .detail-link {
+    height: 40px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 40px;
+    margin: 10px 0;
+}
+/*内 li的样式*/
+.da-detail .detail-link li {
+    float: left;
+    padding-right: 14px;
+}
+/*首页 链接 样式*/
+.da-detail .detail-link li a {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+/*首页图标*/
+.ico-home {
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    width: 20px;
+    height: 14px;
+    background-position: 0 -45px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+/*>下一*/
+.icon-to {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) -64px -85px no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    width: 7px;
+    height: 21px;
+}
+/*main   左侧*/
+.da-detail .detail-left {
+    width: 1020px;
+    float: left;
+}
+/*商品头部*/
+.da-detail .detail-left .detail-intro {
+    margin-bottom: 20px;
+}
+/*商品图片 区*/
+.da-detail .detail-left .goods-show {
+    width: 378px;
+    float: left;
+    padding-top: 10px;
+}
+.da-detail .detail-left .goods-show .goods-big {
+    width: 379px;
+    height: 379px;
+    border: 1px solid #e5e5e5;
+}
+/*图片*/
+.goods-big .goods-img {
+    width: 379px;
+    height: 379px;
+}
+/*图片下 分享区*/
+.da-detail .detail-left .goods-show .share {
+    padding-top: 30px;
+    position: relative;
+    z-index: 3;
+}
+/*分享按钮*/
+.share .share-btn {
+    font-size: 12px;
+    line-height: 15px!important;
+    text-indent: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.f1{    float: left;}
+
+.share-btn, .share-btn .share-btn-inner {
+    margin: 0 4px 0 0!important;
+    padding: 0!important;
+    float: none;
+}
+/*分享 外 a标签*/
+.share-btn .share-btn-inner {
+    background-image: none;
+    height: 16px;
+    line-height: 16px;
+    width: auto;
+    color: #666;
+}
+/*分享图标*/
+.share .icon-share {
+    margin-right: 4px;
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    width: 16px;
+    height: 16px;
+    background-position: -25px -23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.pf40 {
+    padding-left: 40px;
+}
+/*收藏心形*/
+.ico-collect-x {
+    width: 18px;
+    background-position: -23px -2px;
+	margin-right: 4px;
+    display: inline-block;
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    vertical-align: middle;
+    margin-top: -2px;
+    height: 15px;
+}
+/*消费者告知书 块*/
+.da-detail .detail-left .goods-show .share .tip-note-box {
+    position: absolute;
+    width: 205px;
+    line-height: 18px;
+    left: 200px;
+    margin-top: -18px;
+    z-index: 2;
+    padding: 16px 15px 18px 18px;
+}
+/*右浮动*/
+.fr {
+    float: right;
+}
+/*消费者告知书*/
+.da-detail .detail-left .goods-show .share .tip-note-box .tip-title {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    left: 65px;
+    cursor: default;
+}
+/*消费者告知书 图标*/
+.da-detail .detail-left .goods-show .share .ico-infonote {
+    margin-right: 4px;
+    width: 12px;
+    background-position: 0 -23px;
+    display: inline-block;
+    background-image: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico.png)!important;
+    vertical-align: middle;
+    margin-top: -2px;
+    height: 15px;
+}
+/*消费者告知书 右侧 三角*/
+.da-detail .detail-left .goods-show .share .tip-note-box .ico-5-4 {
+    margin-left: 10px;
+    vertical-align: top;
+    margin-top: 6px;
+    display: inline-block;
+    border-style: solid;
+    height: 0;
+    line-height: 0;
+    width: 0;
+    border-width: 5px 4px;
+    border-color: #666 transparent transparent;
+}
+/*点击后 变换三角方向*/
+.da-detail .detail-left .goods-show .share .tip-note-box .ico-5-4h{
+	    border-color: transparent transparent #666;
+	    margin-top: 2px;
+}
+/*点击后 加边框*/
+.note-hover{
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+/*消费者告知书内容*/
+.note{
+	display: none;
+}
+/*商品功能区*/
+.da-detail .detail-left .goods-data {
+	height: 458px;
+    padding-left: 40px;
+    overflow: hidden;
+    position: relative;
+}
+/*功能区标题*/
+.da-detail .detail-left .goods-data h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+/*价格区*/
+/*'达令价'  样式*/
+.da-detail .detail-left .goods-data dt {
+    float: left;
+    width: 80px;
+    line-height: 40px;
+}
+/*价格*/
+.da-detail .detail-left .goods-data dd {
+    float: left;
+    z-index: 2;
+    max-width: 510px;
+}
+.bold {
+    font-weight: 700;
+}
+
+.f30 {
+    font-size: 30px;
+}
+/*折扣*/
+.da-detail .detail-left .goods-data .goods-price dd .price-off {
+    background-color: #f25e5a;
+    color: #fff;
+    padding: 0 2px;
+    line-height: 15px;
+    display: inline-block;
+}
+/*收藏块*/
+.da-detail .detail-left .goods-data .goods-function {
+    height: 20px;
+    margin-top: 24px;
+    padding: 10px 0;
+    border-top: dotted 1px #e5e5e5;
+    border-bottom: dotted 1px #e5e5e5;
+}
+.da-detail .detail-left .goods-data .goods-function li:first-child {
+    border: 0;
+}
+.da-detail .detail-left .goods-data .goods-function li {
+    float: left;
+    width: 198px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    border-left: solid 1px #e5e5e5;
+}
+/*款式*/
+.da-detail .detail-left .goods-data .goods-thumbnail {
+    padding-top: 20px;
+}
+/*图片块*/
+.da-detail .detail-left .goods-data .goods-thumbnail li {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    display: block;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+.da-detail .detail-left .goods-data .goods-thumbnail li img {
+    width: 38px;
+    height: 38px;
+    display: block;
+    border: 1px solid #e5e5e5;
+}
+/*购买数量*/
+/*dl*/
+.da-detail .detail-left .goods-data .goods-number {
+    padding-top: 20px;
+    clear: both;
+}
+/*数量显示快*/
+.da-detail .detail-left .goods-data .goods-number .number {
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 36px;
+    padding-top: 4px;
+}
+/*-1向下箭头块*/
+.da-detail .detail-left .goods-data .goods-number .number .btn-reduce {
+    width: 14px;
+    height: 12px;
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 22px;
+}
+.da-detail .detail-left .goods-data .goods-number .number .btn-reduce .ico-d-5 {
+    vertical-align: top;
+    margin-top: 4px;
+    border-color: #666 transparent transparent;
+    border-width: 5px;
+    border-style: solid;
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width: 0;
+}
+/*+1 向上*/
+.da-detail .detail-left .goods-data .goods-number .number .btn-add {
+    width: 14px;
+    height: 12px;
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    text-align: center;
+}
+.da-detail .detail-left .goods-data .goods-number .number .btn-add .ico-u-5{
+    vertical-align: top;
+    border-width: 5px;
+    border-color: transparent transparent #666;
+    border-style: solid;
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width: 0;
+}
+/*数字显示区*/
+.da-detail .detail-left .goods-data .goods-number .number .number-input {
+    width: 38px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+}
+/*购买区*/
+.da-detail .detail-left .goods-data .goods-btn {
+    padding-left: 80px;
+    padding-top: 30px;
+}
+/*立刻购买*/
+.btn-buy{
+    border: 2px solid #e14958;
+    color: #e14958;
+    margin-right: 20px;
+    background-color: #fff;
+    line-height: 34px;
+    height: 34px;
+}
+.btn-buy, .da-cart-add {
+    text-align: center;
+    float: left;
+    width: 136px;
+    font-size: 16px;
+}
+/*添加购物车*/
+.da-cart-add {
+    background-color: #e14958;
+    border: 1px solid #e14958;
+    color: #fff;
+    line-height: 32px;
+    height: 38px;
+}
+/*tips区*/
+.da-detail .detail-left .goods-data .goods-tips {
+    padding-left: 80px;
+    padding-top: 30px;
+}
+.da-detail .detail-left .goods-data .goods-tips>span {
+    padding-right: 10px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+/*图标共有属性*/
+.ico-mark-1, .ico-mark-2, .ico-mark-3 {
+    vertical-align: middle;
+    width: 20px;
+    height: 22px;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_mark.png) no-repeat;
+}
+/*每个小图标定位*/
+.ico-mark-1 {
+    background-position:0 -36px;
+}
+.ico-mark-2 {
+    background-position:-67px -36px;
+}
+.ico-mark-3 {
+    background-position:0 -8px;
+}
+/*商品信息*/
+.da-detail .detail-left .detail-content {
+    padding-top: 20px;
+}
+/*信息导航栏  购买 开始隐藏*/
+.da-detail .detail-left .detail-content .tag-right {
+    display: none;
+    float: right;
+}
+/*吸顶时显示*/
+.da-detail .detail-left .detail-content.floating .tag-right {
+    display: block;
+    float: right;
+}
+/*li  获得焦点时*/
+.da-detail .detail-left .detail-content .tag li.current {
+    border-width: 3px 1px 1px;
+}
+.da-detail .detail-left .detail-content .tag li.current {
+    border-width: 2px 1px 1px;
+    border-style: solid;
+    border-color: #999 #999 #fff;
+    position: relative;
+}
+/*没有焦点是*/
+.da-detail .detail-left .detail-content .tag li {
+    border-width: 3px 1px 1px;
+}
+.da-detail .detail-left .detail-content .tag li {
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    font-size: 16px;
+    background-color: #fff;
+    border-top: 2px solid #fff;
+}
+/*下三角*/
+.da-detail .detail-left .detail-content .tag li.current .ico-d-5-6 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -6px;
+    display: block;
+}
+.da-detail .detail-left .detail-content .tag li .ico-d-5-6 {
+    display: none;
+}
+.ico-d-5-6 {
+    border-width: 5px 6px;
+    border-style: solid;
+    border-color: #999 transparent transparent;
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width: 0;
+}
+/*商品信息/售后服务a标签样式*/
+.da-detail .detail-left .detail-content .tag li a {
+    display: block;
+    padding: 0 30px;
+}
+/*导航吸顶时*/
+.da-detail .detail-left .detail-content.floating .tag {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    z-index: 100;
+}
+.da-detail .detail-left .detail-content.floating .tag .tag-1 {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+/*吸顶时购买按钮*/
+.da-detail .detail-left .detail-content.floating .btn-buy {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 0;
+    border-bottom: none 0;
+    height: 38px;
+}
+/*吸顶时+购物车按钮*/
+.da-detail .detail-left .detail-content.floating .tag .tag-right .da-cart-add {
+    float: none;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+/*content内容区*/
+.da-detail .detail-left .detail-content .content {
+    border-top: 1px solid #a7a7a7;
+    margin-top: -1px;
+}
+.da-detail .detail-left .detail-content .content .detail-info {
+    width: 960px;
+    margin: 0 auto;
+}
+/*商品参数*/
+.da-detail .detail-left .detail-content .content .detail-info .detail-info-1 {
+    padding-top: 26px;
+    border-bottom: dotted 1px #e5e5e5;
+}
+.da-detail .detail-left .detail-content .content .detail-info dt {
+    font-weight: 700;
+    font-size: 14px;
+}
+.da-detail .detail-left .detail-content .content .detail-info .detail-info-1 dd {
+    padding: 16px 0;
+}
+/*商品展示块*/
+.da-detail .detail-left .detail-content .content .detail-info .detail-info-2,.detail-info .detail-info-8{
+    border-bottom: dotted 1px #e5e5e5;
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+.da-detail .detail-left .detail-content .content .detail-info dt {
+	padding: 26px 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.da-detail .detail-left .detail-content .content .detail-info dd {
+    line-height: 22px;
+    padding-bottom: 20px;
+}
+.goods-big{
+	position: relative;
+}
+/*放大镜  小罩子*/
+.goods-big .position_box{
+		width: 130px;
+		height: 130px;
+		background: #ccc;
+		opacity: 0.6;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 10;
+		display: none;
+	}
+	/*放大镜 右侧显示区*/
+	#b_box{
+		width: 390px;
+		height: 390px;
+		overflow: hidden;
+		position: absolute;
+		left: 110px;
+		top: 5px;
+		display: none;		
+	}
+	/*右侧 隐藏图片块*/
+	#b_box_all{
+		position: absolute;
+		width:1137px;
+		height: 1137px; 
+		left: 0;
+		z-index: 10;
+	}
+	#b_box_all img{
+		width: 100%;
+		height: 100%;
+	}
+/*大家都在看*/
+.da-detail .detail-sidebar {
+    width: 146px;
+    float: right;
+    margin-right: 15px;
+}
+.da-detail .detail-sidebar .sidebar-buying {
+    padding-top: 30px;
+    line-height: 20px;
+}
+/*标题 "大家都在看"*/
+.da-detail .detail-sidebar .sidebar-buying .title {
+    border-top: 1px dotted #e5e5e5;
+    padding-bottom: 20px;
+}
+.da-detail .detail-sidebar .sidebar-buying .title p {
+    width: 82px;
+    margin-top: -10px;
+    margin-left: 30px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+/*每个图片的  主题*/
+.da-detail .detail-sidebar .sidebar-buying li .goods-title {
+    width: 146px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*每个图块 下边距*/
+.da-detail .detail-sidebar .sidebar-buying li {
+    padding-bottom: 16px;
+}
+/*图片块*/
+.da-detail .detail-sidebar .sidebar-buying li .img-ct {
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin-bottom: 4px;
+}
+ .da-detail .detail-sidebar .sidebar-buying li .img-ct img{
+ 	width: 140px;
+    height: 140px;
+}
+/*上下箭头 块*/
+.da-detail .detail-sidebar .sidebar-buying .scroll {
+    text-align: center;
+    width: 140px;
+}
+/*上箭头*/
+.da-detail .detail-sidebar .sidebar-buying .scroll-up {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) -29px -2px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+/*下箭头*/
+.da-detail .detail-sidebar .sidebar-buying .scroll-down {
+    background: url(http://img.cdn.daling.com/st/web/160907170922/styles/images/icon/ico_arrow.png) 0 -2px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+}

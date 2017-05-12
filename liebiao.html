@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="css/pagination.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css" />
+		<link rel="stylesheet" type="text/css" href="css/liebiao.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src="js/jquery.validate.messages_zh.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/cart-fix.js"></script>
+		<script src="js/liebiao.js"></script>
+		<script type="text/javascript" src="js/jquery.pagination.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+	</head>
+	<body>
+		<!--头部导航-->
+		<div id="div-head">
+		</div>
+		<!--banner图----------------------------------------------------------->
+		<div id="div-banner" class="clear">
+		</div>
+		<!--banner图----------------------------------------------------------->
+		<div class="div-nav">
+		</div>
+		<!--详情列------------------------------------------------------------------>
+		<div id="x-main">
+			<!--选择大分类-->
+			<div class="search-link">
+				<ul class="clear">
+					<!--跳转 首页  的 图标-->
+					<li><a href="index.html">
+						<span class="ico-home"></span>
+					</a>
+					<span class="ico-to"></span>
+					</li>
+					<!--分类选择-->
+					<li>
+						<a href="#" class="sort">
+							<span class="sort-name">尖货女装</span>
+							<!--上下箭头-->
+							<span class="ico-sort-ar">
+								<span class="up"></span>
+								<span class="down"></span>
+							</span>
+							<!--隐藏选项-->
+							<div class="drop" style="display: none;">
+								<ul>
+									<li>3C家电</li>
+									<li>尖货女装</li>
+									<li>时尚配饰</li>
+									<li>创意生活</li>
+									<li>全球零食</li>
+									<li>极致美肤</li>
+								</ul>
+							</div>
+						</a>
+						<div class="ico-to"></div>
+					</li>
+					<li>
+						<div class="sort">
+							<input type="text" class="search-input"/>
+							<input type="button" class="ico-search"></input>
+						</div>
+					</li>
+				</ul>
+			</div><!--分类块  搜索快-->
+			<div class="condition">
+				<ul>
+					<li class="clear">
+						<dl>
+							<dt>分类:</dt>
+							<dd>
+								<a href="javascript:;">裙装</a>
+								<a href="javascript:;">针织裙</a>
+								<a href="javascript:;">全身裙</a>
+								<a href="javascript:;">裤裙</a>
+								<a href="javascript:;">休闲裤</a>
+								<a href="javascript:;">皮裤</a>
+								<a href="javascript:;">打底裤</a>
+								<a href="javascript:;">牛仔裤</a>
+								<a href="javascript:;">上装</a>
+								<a href="javascript:;">针织衫</a>
+								<a href="javascript:;">毛衣</a>
+								<a href="javascript:;">韩范大衣</a>
+							</dd>
+						</dl>
+						<!--更多 按钮-->
+						<div class="options">
+							<a href="#" class="more">
+								<span class="ico-r"></span>
+								<span class="text-more">更多</span>
+							</a>
+						</div>
+					</li>
+					<li class="clear">
+						<dl>
+							<dt>品牌:</dt>
+							<dd>
+								<a href="javascript:;">AFDP</a>
+								<a href="javascript:;">雪黛</a>
+								<a href="javascript:;">则言</a>
+								<a href="javascript:;">依嬅莎</a>
+								<a href="javascript:;">七格格</a>
+								<a href="javascript:;">PEMY</a>
+								<a href="javascript:;">舒雪儿</a>
+								<a href="javascript:;">莎丽柏</a>
+								<a href="javascript:;">美都汇</a>
+								<a href="javascript:;">满彩绘秀</a>
+								<a href="javascript:;">颔首</a>
+								<a href="javascript:;">白依恋歌</a>
+								<a href="javascript:;">俏</a>
+								<a href="javascript:;">bees do</a>
+								<a href="javascript:;">欧罗兰</a>
+								<a href="javascript:;">昆蒂娜</a>
+								<a href="javascript:;">WFST</a>
+								<a href="javascript:;">梦若兰</a>	
+								<a href="javascript:;">米莱达</a>
+								<a href="javascript:;">海贝</a>
+								<a href="javascript:;">仟衣阁</a>
+								<a href="javascript:;">秋壳</a>
+								<a href="javascript:;">QIGIRL</a>
+								<a href="javascript:;">凡品丹妮</a>
+								<a href="javascript:;">HAVVA</a>
+								<a href="javascript:;">VB</a>	
+								<a href="javascript:;">LUNA LIMTED</a>
+								<a href="javascript:;">小维同学</a>
+								<a href="javascript:;">kefenge</a>
+								<a href="javascript:;">洁雅轩逸</a>
+								<a href="javascript:;">安妮陈</a>
+								<a href="javascript:;">颔首</a>
+							</dd>
+						</dl>
+						<!--更多 按钮-->
+						<div class="options">
+							<a href="javascript:;">
+							<span class="ico-add1">+</span>
+							<span class="text-mul">多选</span>
+							</a>
+							<a href="javascript:;" class="more">
+								<span class="ico-r"></span>
+								<span class="text-more">更多</span>
+							</a>
+						</div>
+					</li>
+					<li class="clear">
+						<dl>
+							<dt>价格:</dt>
+							<dd>
+								<a href="javascript:;">0-50</a>
+								<a href="javascript:;">50-100</a>
+								<a href="javascript:;">100-500</a>
+								<a href="javascript:;">500以上</a>
+								<a href="javascript:;">休闲裤</a>
+								<a href="javascript:;">皮裤</a>
+								<a href="javascript:;">打底裤</a>
+								<a href="javascript:;">牛仔裤</a>
+								<a href="javascript:;">上装</a>
+								<a href="javascript:;">针织衫</a>
+								<a href="javascript:;">毛衣</a>
+								<a href="javascript:;">韩范大衣</a>
+							</dd>
+						</dl>
+						<!--更多 按钮-->
+						<div class="options">
+							<a href="javascript:;">
+							<span class="ico-add1">+</span>
+							<span class="text-mul">多选</span>
+							</a>
+							<a href="javascript:;" style="visibility: hidden;">
+								<span class="ico-r"></span>
+								<span class="text-more">更多</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			<!--排序-->
+			<div class="sortbar">
+				<div class="sortinner">
+					<span class="pr10">排序:</span>
+					<a href="javascript:;" class="current">默认
+						<span class="ico-sort-d ico-sort-dr"></span>
+					</a>
+					<a href="javascript:;" class="pr10">价格
+						<span class="ico-sort-ar">
+								<span class="up"></span>
+								<span class="down"></span>
+						</span>
+					</a>
+					<a href="javascript:;">销量
+						<span class="ico-sort-d"></span>
+					</a>
+					<a href="javascript:;">人气
+						<span class="ico-sort-d"></span>
+					</a>
+					<a href="javascript:;">上架时间
+						<span class="ico-sort-d"></span>
+					</a>
+					<span class="stock">
+						<label>
+							<input type="checkbox" >只看有货
+						</label>
+					</span>
+				</div>
+			</div>
+			<div class="searchlist">
+				<ul  class="w285 clear">
+						<!--这块 动态加载 下面的ul只是一个模板-->
+						<!--<li>-->
+							<!--<a href="#" target="_blank" class="new-li-img"><img src="http://img.cdn.daling.com/data/files/zin/2016/09/08/FA163E0C4D3EG98D2NR9HGH8INR.jpg" title="悦诗风吟蜂蜜面膜10片(10片)"/>-->
+								<!--<div class="option">-->
+									<!--加入购物车-->
+									<!--<span class="ico-g-cart"></span>-->
+								<!--</div>-->
+							<!--</a>-->
+							<!--<div class="data">-->
+								<!--<p class="price clear">-->
+									<!--<span class="collect">人收藏</span>-->
+									<!--<span class="red">¥</span>-->
+									<!--<span class="now-price">59.00</span>-->
+									<!--<span class="old-price">¥99.00</span>-->
+								<!--</p>-->
+								<!--<p class="title">-->
+									<!--<span class="red">5折/</span>-->
+									<!--<a href="javascript:;" target="_blank">-->
+										<!--[韩国 · 打造水润蜜光肌肤]Innisfree悦诗风吟蜂蜜面膜10片(10片)-->
+									<!--</a>-->
+								<!--</p>-->
+							<!--</div>-->
+						<!--</li>-->
+					<!--这块 动态加载 ul只是一个模板-->
+				</ul>
+				
+				
+
+		</div>
+			<div id="setPageDiv">
+				    <div id="Pagination" class="pagination"></div>
+					</div>
+			</div>
+		
+		<!--底部-->
+		<div id="div-foot">
+		</div>
+		<div class="cart-fix">
+		</div>
+	</body>
+</html>
